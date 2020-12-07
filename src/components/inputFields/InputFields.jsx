@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-function InputFields() {
+function InputFields(props) {
   const [field, setFeild] = useState();
   return (
-    <div>
-      <input
-        type="text"
-        value={field}
-        onChange={(e) => setFeild(e.target.value)}
-        style={{ padding: "20px" }}
-      />
-    </div>
+    <input
+      type="text"
+      value={field}
+      onChange={(e) => setFeild(e.target.value)}
+      placeholder={props.placeholder}
+      style={{
+        padding: `${props.padding}`,
+        width: `${props.width}`,
+        marginRight: `${props.margin}`,
+        placeholder: `${props.placeholder}`,
+      }}
+    />
   );
 }
 

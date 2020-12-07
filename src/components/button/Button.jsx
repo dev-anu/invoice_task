@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./btn.css";
 function Button(props) {
   return (
     <div>
-      <button style={{ background: "#3535fb" }}>button</button>
+      <button className="btn">{props.name}</button>
     </div>
   );
 }
